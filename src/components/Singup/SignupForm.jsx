@@ -7,7 +7,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import LockIcon from "@mui/icons-material/Lock";
 import IconButton from "@mui/material/IconButton";
-const SigninForm = () => {
+const SignupForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -118,4 +118,4 @@ const SigninForm = () => {
   );
 };
 
-export default SigninForm;
+export default SignupForm;

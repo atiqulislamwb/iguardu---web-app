@@ -1,4 +1,3 @@
-import React from "react";
 import banner from "../../assets/home/right-banner.png";
 import person from "../../assets/home/person.png";
 import star from "../../assets/home/star.png";
