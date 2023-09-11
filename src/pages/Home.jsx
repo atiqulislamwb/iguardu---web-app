@@ -10,14 +10,20 @@ import CommonLayout from "../Layout/CommonLayout";
 const Home = () => {
   return (
     <CommonLayout>
-      <div className="max-w-[1440px] mx-auto">
+      <div className="">
         <Banner />
         <FindBest />
-        <Jobs />
+        <div className="bg-[#F7F7FB] ">
+          <Jobs />
+        </div>
         <ForClient />
-        <HowItWork />
+        <div className="bg-[#F7F7FB] ">
+          <HowItWork />
+        </div>
         <PostAJob />
-        <FindGreatWork />
+        <div className="bg-[#F7F7FB] ">
+          <FindGreatWork />
+        </div>
       </div>
     </CommonLayout>
   );
