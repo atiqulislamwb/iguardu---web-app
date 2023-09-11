@@ -18,7 +18,7 @@ const SingUpQuestion = () => {
 
   return (
     <div className="relative h-[100vh] overflow-hidden px-5 md:px-0 ">
-      <div className="hidden md:block w-[200px] md:w-[300px] lg:w-[402px] bottom-0 left-0 absolute h-[100px] md:h-[140] lg:h-[196px]">
+      <div className="hidden md:block w-[200px] md:w-[250px] lg:w-[300px] mid-xl:w-[400px] absolute bottom-0 left-0  h-[100px] md:h-[140] lg:h-[196px]">
         <img
           src={img1}
           className="w-full h-full object-contain"
@@ -40,7 +40,7 @@ const SingUpQuestion = () => {
         {/* Client button */}
         <button
           onClick={() => handleOptionSelect("client")}
-          className={`w-full md:w-[411px] h-[90px] md:h-[109px] p-3 mt-[50px] rounded-md border-2 border-[#E1E0EF] ${
+          className={`w-full md:w-[411px] h-[80px] md:h-[109px] p-3 mt-[50px] rounded-md border-2 border-[#E1E0EF] ${
             selectedOption === "client" ? "border-[#5248AA]" : ""
           }`}
         >
@@ -65,7 +65,7 @@ const SingUpQuestion = () => {
         {/* Guard button */}
         <button
           onClick={() => handleOptionSelect("guard")}
-          className={`w-full md:w-[411px]  h-[90px]  md:h-[109px] p-3 mt-[40px] rounded-md border-2 border-[#E1E0EF] ${
+          className={`w-full md:w-[411px]  h-[80px]  md:h-[109px] p-3 mt-[40px] rounded-md border-2 border-[#E1E0EF] ${
             selectedOption === "guard" ? "border-[#5248AA]" : ""
           }`}
         >
@@ -90,14 +90,13 @@ const SingUpQuestion = () => {
         </button>
 
         {/* submit button */}
-        <Link to="/">
-          <button
-            onClick={handleSubmit}
-            className="w-full md:w-[411px] h-[61px] text-xl text-white items-center p-3 mt-[40px] rounded-md bg-[#483E9C] hover:border-[2px] border-[#483E9C] hover:bg-white hover:text-[#483E9C] duration-300"
-          >
-            Continue
-          </button>
-        </Link>
+
+        <button
+          onClick={handleSubmit}
+          className="w-full md:w-[411px] h-[50px] md:h-[61px] text-md md:text-xl text-white items-center p-3 mt-[40px] rounded-md bg-[#483E9C] hover:border-[2px] border-[#483E9C] hover:bg-white hover:text-[#483E9C] duration-300"
+        >
+          Continue
+        </button>
       </div>
     </div>
   );

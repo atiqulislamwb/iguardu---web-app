@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import SingUpQuestion from "./pages/SingUpQuestion";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
+import ForgetPassword from "./pages/ForgetPassword";
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
           <Route path="/signup-question" element={<SingUpQuestion />} />
           <Route path="/sign-in" element={<Signin />} />
           <Route path="/sign-up" element={<Signup />} />
+          <Route path="/forget-password" element={<ForgetPassword />} />
         </Routes>
       </div>
     </>

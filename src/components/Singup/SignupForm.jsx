@@ -7,6 +7,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import LockIcon from "@mui/icons-material/Lock";
 import IconButton from "@mui/material/IconButton";
+import { Link } from "react-router-dom";
 const SignupForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,13 +26,13 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="md:p-10 px-3 md:px-[100px] overflow-y-auto ">
-      <div className="flex flex-col items-center justify-center ">
-        <p className="nekst text-center  font-normal mt-[50px] text-[25px] md:text-[30px] lg:text-[40px] leading-[45px]  text-[#29273E]">
+    <div className="md:p-10 px-3 md:px-[100px] overflow-y-auto">
+      <div className="flex flex-col items-center justify-center p-4 ">
+        <p className="nekst text-center  font-normal mt-[30px] md:mt-[50px] w-full text-[25px] md:text-[30px] lg:text-[40px] leading-[30px] md:leading-[45px]  text-[#29273E]">
           Start Your Journey
         </p>
 
-        <p className="text-[18px] leading-[27px] text-[#818186] font-normal mt-[40px] text-center w-[80%]">
+        <p className="text-[15px] md:text-[18px] leading-[27px]  text-[#818186] font-normal mt-[20px] md:mt-[30px] lg:mt-[40px] w-[100%] md:w-[90%] lg:w-[60%] mid-xl:w-[75%] mx-auto">
           Whether just starting out or looking to improve or grow your business,
           our expert advice can help you on the road to success.
         </p>
@@ -94,11 +95,11 @@ const SignupForm = () => {
         </button>
 
         <div className="flex items-center justify-center mt-[50px]">
-          <div className="min-w-[90px]  max-w-[141px] h-[2px] bg-[#E2E1EB]"></div>
+          <div className=" w-[50px] md:w-[100px] lg:w-[141px] h-[2px] bg-[#E2E1EB]"></div>
           <p className="text-[12px] mx-[10px] leading-[18px] text-[#646378] font-normal">
             Or Sign up with{" "}
           </p>
-          <div className="min-w-[90px]  max-w-[141px] h-[2px] bg-[#E2E1EB]"></div>
+          <div className="w-[50px] md:w-[100px] lg:w-[141px] h-[2px] bg-[#E2E1EB]"></div>
         </div>
 
         <button className="w-full md:w-[411px] h-[61px] text-[14px] flex gap-4 items- justify-center p-4 mt-[40px] rounded-md border-[2px] hover:border-[#483E9C] border-[#A4A4AA]  duration-300">
@@ -109,9 +110,11 @@ const SignupForm = () => {
           />
           Sign In With Google
         </button>
-        <p className=" text-center mt-[30px] text-[18px] text-[#B9B8C0] leading-[27px]  font-medium ">
-          Have an account ? <span className="text-[#483E9C]">Sign In </span>
-        </p>
+        <Link to="/sign-in">
+          <p className=" text-center mt-[30px] text-[15px] md:text-[18px] text-[#B9B8C0] leading-[27px]  font-medium ">
+            Have an account ? <span className="text-[#483E9C]">Sign In </span>
+          </p>
+        </Link>
       </div>
     </div>
   );

@@ -7,6 +7,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import LockIcon from "@mui/icons-material/Lock";
 import IconButton from "@mui/material/IconButton";
+import { Link } from "react-router-dom";
 const SigninForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -47,7 +48,7 @@ const SigninForm = () => {
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end">
-                  <AccountCircleIcon />
+                  <AccountCircleIcon color="#3F358D" />
                 </InputAdornment>
               ),
               style: {
@@ -85,8 +86,15 @@ const SigninForm = () => {
               },
             }}
           />
-        </div>
 
+          <Link
+            to="/forget-password"
+            className="flex items-end justify-end mt-[-15px] "
+          >
+            <p className="text-[12px] text-[#5248AA]">Forget Password</p>
+          </Link>
+        </div>
+        <div></div>
         {/* submit button */}
 
         <button className="w-full md:w-[411px] h-[61px] text-[14px] text-white items-center p-3 mt-[40px] rounded-md bg-[#483E9C] hover:border-[2px] border-[#483E9C] hover:bg-white hover:text-[#483E9C] duration-300">
@@ -109,10 +117,12 @@ const SigninForm = () => {
           />
           Sign In With Google
         </button>
-        <p className=" text-center mt-[30px] text-[18px] text-[#B9B8C0] leading-[27px]  font-medium ">
-          Don't have an igardu account?{" "}
-          <span className="text-[#483E9C]">Sign up </span>
-        </p>
+        <Link to="/sign-up">
+          <p className=" text-center mt-[30px] text-[18px] text-[#B9B8C0] leading-[27px]  font-medium ">
+            Don't have an igardu account?{" "}
+            <span className="text-[#483E9C]">Sign up </span>
+          </p>
+        </Link>
       </div>
     </div>
   );
