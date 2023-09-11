@@ -25,10 +25,10 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="md:p-10 px-3 md:px-[100px]   ">
-      <div className="flex flex-col items-center justify-center">
+    <div className="md:p-10 px-3 md:px-[100px] overflow-y-auto ">
+      <div className="flex flex-col items-center justify-center ">
         <p className="nekst text-center  font-normal mt-[50px] text-[25px] md:text-[30px] lg:text-[40px] leading-[45px]  text-[#29273E]">
-          Welcome to iguardu
+          Start Your Journey
         </p>
 
         <p className="text-[18px] leading-[27px] text-[#818186] font-normal mt-[40px] text-center w-[80%]">
@@ -90,7 +90,7 @@ const SignupForm = () => {
         {/* submit button */}
 
         <button className="w-full md:w-[411px] h-[61px] text-[14px] text-white items-center p-3 mt-[40px] rounded-md bg-[#483E9C] hover:border-[2px] border-[#483E9C] hover:bg-white hover:text-[#483E9C] duration-300">
-          Sign In
+          Create an account
         </button>
 
         <div className="flex items-center justify-center mt-[50px]">
@@ -110,8 +110,7 @@ const SignupForm = () => {
           Sign In With Google
         </button>
         <p className=" text-center mt-[30px] text-[18px] text-[#B9B8C0] leading-[27px]  font-medium ">
-          Don't have an igardu account?{" "}
-          <span className="text-[#483E9C]">Sign up </span>
+          Have an account ? <span className="text-[#483E9C]">Sign In </span>
         </p>
       </div>
     </div>
