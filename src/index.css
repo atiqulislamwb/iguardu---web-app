@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family:nekst;
+    src: url("./assets//font/Nekst-Bold.otf");
+}
+.nekst{
+    font-family: nekst;
+}
+
+.my-background{
+    background-image: url('./assets/signin/1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Additional background properties if needed */
+  }
