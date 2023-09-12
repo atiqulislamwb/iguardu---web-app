@@ -3,8 +3,8 @@ import work from "../../assets/home/work.png";
 
 const FindGreatWork = () => {
   return (
-    <div className="max-w-[1440px] mx-auto">
-      <div className="px-4 md:px-10 lg:px-32 py-10 md:py-16 lg:py-28 mb-44  flex flex-col md:flex-row gap-5 lg:gap-20 items-center">
+    <div className="max-w-[1440px] mx-auto overflow-hidden">
+      <div className="px-4 md:px-10 lg:px-32 pt-10 md:pt-16 lg:pt-28 pb-48 md:pb-64 bg-[#F7F7FB] flex flex-col md:flex-row gap-5 lg:gap-20 items-center">
         <div className="flex-1">
           <img className="mx-auto" src={work} alt="" />
         </div>

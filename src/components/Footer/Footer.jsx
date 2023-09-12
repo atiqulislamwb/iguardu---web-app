@@ -32,18 +32,12 @@ const Footer = () => {
     <div className="max-w-[1440px] mx-auto ">
       <div className=" bg-[#29273E] pt-56 pb-10 lg:pb-28 px-3 md:px-8 lg:px-24 relative">
         {/*  */}
-        <div
-          className="container mx-auto bg-[#5248AA] py-6
-       md:py-10 lg:py-12 px-3 md:px-6 lg:px-36 rounded-[10px]
-        flex flex-col lg:flex-row-reverse items-center gap-5 
-        lg:gap-40 absolute top-[-1%] left-[50%] translate-x-[-50%]
-         translate-y-[-50%]"
-        >
+        <div className="absolute w-[95%] md:w-[90%] lg:w-[80%] bg-[#5248AA] py-6 md:py-10 lg:py-12 px-3 md:px-6 lg:px-36 rounded-[10px] flex flex-col lg:flex-row-reverse items-center gap-5 lg:gap-40 top-[-1%] left-[50%] translate-x-[-50%] translate-y-[-50%] ">
           <div className="flex-1">
             <img className="mx-auto" src={logo} alt="logo" />
           </div>
           <div className="flex-1">
-            <h2 className="text-2xl nekst md:text-3xl lg:text-4xl mb-3 text-[#F8FAF7] font-bold">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl mb-3 text-[#F8FAF7] font-bold">
               We are here to help
             </h2>
             <p className="text-base md:text-lg mb-4 text-[#F8FAF7] text-justify">

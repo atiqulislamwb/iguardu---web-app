@@ -10,7 +10,7 @@ import SuccessPassword from "./pages/SuccessPassword";
 function App() {
   return (
     <>
-      <div className="w-[100vw] overflow-hidden px-4 md:p-0">
+      <div className=" overflow-hidden   px-4 md:p-0">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signup-question" element={<SingUpQuestion />} />

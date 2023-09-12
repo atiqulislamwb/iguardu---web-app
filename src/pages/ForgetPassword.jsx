@@ -58,10 +58,12 @@ const ForgetPassword = () => {
           />
         </div>
         {/* submit button */}
-
-        <button className="w-full md:w-[411px] h-[50px] md:h-[61px] text-md md:text-md text-white items-center p-3 mt-[40px] rounded-md bg-[#483E9C] hover:border-[2px] border-[#483E9C] hover:bg-white hover:text-[#483E9C] duration-300">
-          Reset Password
-        </button>
+        <Link
+          to="/setnew-password"
+          className="w-full md:w-[411px] h-[50px] md:h-[61px] text-md md:text-md text-white items-center p-3 mt-[40px] rounded-md bg-[#483E9C] flex justify-center  hover:border-[2px] border-[#483E9C] hover:bg-white hover:text-[#483E9C] duration-300"
+        >
+          <button>Reset Password</button>
+        </Link>
         <Link to="/sign-in">
           <p className=" text-left mt-[40px] text-[18px]  text-[#B9B8C0] leading-[27px]  font-medium ">
             Back to? <span className="text-[#483E9C]">Sign in </span>

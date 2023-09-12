@@ -2,17 +2,30 @@ import google from "../../assets/signin/google.png";
 import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
-import LockIcon from "@mui/icons-material/Lock";
+
 import IconButton from "@mui/material/IconButton";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
+import app from "../../firebase/auth";
+const auth = getAuth(app);
+import { StateContext } from "../../context/context";
+
 const SigninForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-
+  const { setUser } = useContext(StateContext);
+  const navigate = useNavigate();
+  const provider = new GoogleAuthProvider();
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
@@ -23,6 +36,21 @@ const SigninForm = () => {
 
   const handleChange = (event) => {
     setEmail(event.target.value);
+  };
+
+  const handleGoogleLogin = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        setLoading(true);
+        const user = result.user;
+        setUser(user);
+
+        setLoading(false);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -109,7 +137,10 @@ const SigninForm = () => {
           <div className="min-w-[90px]  max-w-[141px] h-[2px] bg-[#E2E1EB]"></div>
         </div>
 
-        <button className="w-full md:w-[411px] h-[61px] text-[14px] flex gap-4 items- justify-center p-4 mt-[40px] rounded-md border-[2px] hover:border-[#483E9C] border-[#A4A4AA]  duration-300">
+        <button
+          onClick={handleGoogleLogin}
+          className="w-full md:w-[411px] h-[61px] text-[14px] flex gap-4 items- justify-center p-4 mt-[40px] rounded-md border-[2px] hover:border-[#483E9C] border-[#A4A4AA]  duration-300"
+        >
           <img
             src={google}
             className="w-[22px] h-[22px] object-cover "
