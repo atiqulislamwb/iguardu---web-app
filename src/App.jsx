@@ -5,6 +5,8 @@ import SingUpQuestion from "./pages/SingUpQuestion";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import ForgetPassword from "./pages/ForgetPassword";
+import NewPassword from "./pages/NewPassword";
+import SuccessPassword from "./pages/SuccessPassword";
 function App() {
   return (
     <>
@@ -15,6 +17,8 @@ function App() {
           <Route path="/sign-in" element={<Signin />} />
           <Route path="/sign-up" element={<Signup />} />
           <Route path="/forget-password" element={<ForgetPassword />} />
+          <Route path="/setnew-password" element={<NewPassword />} />
+          <Route path="/success-password" element={<SuccessPassword />} />
         </Routes>
       </div>
     </>

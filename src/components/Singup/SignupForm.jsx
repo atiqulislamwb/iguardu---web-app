@@ -5,7 +5,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { useState } from "react";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
-import LockIcon from "@mui/icons-material/Lock";
+
 import IconButton from "@mui/material/IconButton";
 import { Link } from "react-router-dom";
 const SignupForm = () => {
