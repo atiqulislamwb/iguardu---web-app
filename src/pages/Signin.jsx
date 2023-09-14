@@ -3,7 +3,7 @@ import SignInRightSide from "../components/Signin/SignInRightSide";
 
 const Signin = () => {
   return (
-    <div className="">
+    <div className=" ">
       <div className="flex h-[100vh] overflow-hidden p-5 md:p-0 ">
         <div className="w-full  md:w-1/2">
           <SigninForm />

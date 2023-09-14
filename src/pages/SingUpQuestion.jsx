@@ -1,19 +1,27 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import img1 from "../assets/signupquestion/img1.png";
 import img2 from "../assets/signupquestion/img2.png";
 import client from "../assets/signupquestion/client.png";
 import guard from "../assets/signupquestion/guard.png";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const SingUpQuestion = () => {
   const [selectedOption, setSelectedOption] = useState(null);
 
+  const navigate = useNavigate();
   const handleOptionSelect = (option) => {
     setSelectedOption(option === selectedOption ? null : option);
   };
 
-  const handleSubmit = () => {
-    console.log(selectedOption);
+  const handleSubmit = (event) => {
+    event.stopPropagation();
+
+    if (selectedOption === null) {
+      return toast.error("Please select your role");
+    } else {
+      navigate("/sign-up", { state: selectedOption });
+    }
   };
 
   return (
@@ -40,7 +48,7 @@ const SingUpQuestion = () => {
         {/* Client button */}
         <button
           onClick={() => handleOptionSelect("client")}
-          className={`w-full md:w-[411px] h-[80px] md:h-[109px] p-3 mt-[50px] rounded-md border-2 border-[#E1E0EF] ${
+          className={`w-full md:w-[411px] h-[80px] hover:border-[#3F358D] md:h-[109px] p-3 mt-[50px] rounded-md border-2 border-[#E1E0EF] ${
             selectedOption === "client" ? "border-[#5248AA]" : ""
           }`}
         >
@@ -65,7 +73,7 @@ const SingUpQuestion = () => {
         {/* Guard button */}
         <button
           onClick={() => handleOptionSelect("guard")}
-          className={`w-full md:w-[411px]  h-[80px]  md:h-[109px] p-3 mt-[40px] rounded-md border-2 border-[#E1E0EF] ${
+          className={`w-full md:w-[411px]  h-[80px]  md:h-[109px] p-3 mt-[40px] hover:border-[#3F358D]  rounded-md border-2 border-[#E1E0EF] ${
             selectedOption === "guard" ? "border-[#5248AA]" : ""
           }`}
         >

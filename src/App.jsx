@@ -7,6 +7,7 @@ import Signup from "./pages/Signup";
 import ForgetPassword from "./pages/ForgetPassword";
 import NewPassword from "./pages/NewPassword";
 import SuccessPassword from "./pages/SuccessPassword";
+import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
           <Route path="/setnew-password" element={<NewPassword />} />
           <Route path="/success-password" element={<SuccessPassword />} />
         </Routes>
+        <Toaster position="top-center" reverseOrder={false} />
       </div>
     </>
   );
